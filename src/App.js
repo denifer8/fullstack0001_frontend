@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Filtro from './components/Filtro';
+import Vuelos from './components/Vuelos';
+
 
 function App() {
+
+    const [vuelos, setVuelos] = useState([]);
+    const [filtro,setFiltro] = useState({});
+ 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {(
+          vuelos.length === 0 && 
+              <Filtro vuelos={vuelos} setVuelos={setVuelos}
+                      filtro={filtro} setFiltro={setFiltro} />       
+          )} 
+        
+         {(
+          vuelos.length !== 0 && 
+               <Vuelos vuelos={vuelos} setVuelos={setVuelos} />          
+          )}        
       </header>
+      
     </div>
   );
 }

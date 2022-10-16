@@ -1,0 +1,37 @@
+/* .vuelosPage{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+} */
+
+.vuelosGrill{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: 200px 200px 200px;   */
+}
+.back{
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
+.buttonCompar{
+    border-radius: 8px;
+    margin: 5px 10px;
+    background-color:rgb(54, 124, 124);
+    border-color: rgb(36, 73, 73);   
+    font-weight: bold;
+    padding: 10px;
+}
+.vueloCard{
+    background-color: rgb(97, 177, 177);
+    border-radius: 8px;
+    margin: 5px 10px;
+    /* height: 100px; */
+    padding: 25px 0;
+    color:darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* @media (min-width: 600) {
+    .vuelosPage{grid-template-columns: repeat(1, 1fr);}
+    
+} */
