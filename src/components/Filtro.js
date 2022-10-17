@@ -12,7 +12,9 @@ export default function Filtro(props) {
         //****************** */ 
         // Obtener el JSON desde un servicio local
         //  const url = "http://localhost:4000/api/reservas?nombre=${nombre},";
-         const url = "http://localhost:4000/api/reservas";
+         const url =  "http://localhost:4000/api/reservas";
+           const link_url = process.env.REACT_APP_URL_BASE || "nada";
+          console.log("link", link_url)
         try{
           // const api = await fetch(url,{id, nombre, fecha, hora})
           const api = await fetch(url);
